@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HomeOracle | House Chatbot</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="chat-container">
+    <div class="chat-header">
+        <h2>🏠 HomeOracle</h2>
+        <p>Price Estimator & Availability Checker</p>
+    </div>
+    <div class="chat-body" id="chat-body">
+        <div class="bot-message fade-in">Hello! Choose a service:</div>
+        <div class="options fade-in">
+            <button onclick="startChat('price')">Price Calculator</button>
+            <button onclick="startChat('availability')">Availability Checker</button>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+    margin:0;font-family:'Segoe UI',sans-serif;background:#0f0f0f;color:#f0f0f0;
+}
+.chat-container {
+    max-width:900px;margin:40px auto;background: linear-gradient(145deg,#1c1c1c,#222);
+    border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.7);
+}
+.chat-header {
+    background:#1a1a1a;padding:25px;text-align:center;border-bottom:1px solid #333;
+}
+.chat-header h2 {color:#4e9af1;margin:10px 0;font-size:28px;}
+.chat-header p {color:#bbb;margin:0;font-size:16px;}
+.chat-body {
+    padding:25px;max-height:750px;overflow-y:auto;display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth;
+}
+.bot-message, .user-message {
+    margin:5px 0;padding:14px 20px;border-radius:20px;max-width:75%;line-height:1.4;opacity:0;transform:translateY(20px);
+    animation:fadeUp 0.5s forwards;
+}
+.bot-message {background:#2a2a2a; align-self:flex-start; box-shadow:0 4px 12px rgba(0,0,0,0.5);}
+.user-message {background:#4e9af1; color:#fff; align-self:flex-end; box-shadow:0 4px 12px rgba(0,0,0,0.5);}
+.options {display:flex;flex-wrap:wrap;gap:10px;}
+.options button {
+    padding:12px 20px;border:none;border-radius:12px;background:#4e9af1;color:#fff;cursor:pointer;font-size:15px;transition:0.3s;
+}
+.options button:hover {background:#3578d4; transform:translateY(-2px);}
+.options button.selected {background:#2ed573;}
+.house-grid {display:grid;grid-template-columns: repeat(auto-fit,minmax(240px,1fr));gap:15px;}
+.house-card {
+    background:#1c1c1c;border-radius:15px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.6);transition:0.3s;
+}
+.house-card:hover {box-shadow:0 8px 25px rgba(78,157,241,0.7); transform:translateY(-4px);}
+.house-card h3 {margin:0 0 8px 0;color:#4e9af1;}
+.house-card p {margin:4px 0;font-size:14px;}
+.facility-icon {display:inline-block;background:#2a2a2a;padding:4px 8px;margin:2px 4px 2px 0;border-radius:8px;font-size:12px;color:#fff;transition:0.3s;}
+.facility-icon:hover {background:#4e9af1;color:#fff;}
+@keyframes fadeUp {to {opacity:1; transform:translateY(0);}}
+.fade-in {opacity:0; animation:fadeUp 0.6s forwards;}
